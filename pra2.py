@@ -1,13 +1,17 @@
 import sys
-while True:
+boolean =True
+while boolean ==True:
   recive_price =int(input("金額を入力してください"))
   sum_price =int(input("商品金額を入力してください"))
   rm_charge =recive_price - sum_price
+  if recive_price <0 or sum_price<0:
+    print("再度入力してください")
+    continue
+  if rm_charge<0:
+    print("金額が不足しています")
+    continue
+  boolean =False
 lists =[]
-
-if rm_charge<0:
-  print("金額が適切でないため終了")
-  sys.exit()
 
 price =[5000,1000,500,100,50,10,5,1]
 
