@@ -1,38 +1,18 @@
-recive_price =int(input("金額を入力してください"))
-sum_price =int(input("商品金額を入力してください"))
-charge =recive_price - sum_price
-rm_charge =recive_price - sum_price
-lists=[]
-# if rm_charge>5:
-lists.append(charge//5000)
-rm_charge =(charge%5000)
+import sys
+while True:
+  recive_price =int(input("金額を入力してください"))
+  sum_price =int(input("商品金額を入力してください"))
+  rm_charge =recive_price - sum_price
+lists =[]
 
-lists.append(rm_charge//1000)
-rm_charge=(rm_charge%1000)
-# sm5=(charge//5000)
-lists.append(rm_charge//500)
-rm_charge=(rm_charge%500)
+if rm_charge<0:
+  print("金額が適切でないため終了")
+  sys.exit()
 
-lists.append(rm_charge//100)
-rm_charge=(rm_charge%100)
+price =[5000,1000,500,100,50,10,5,1]
 
-lists.append(rm_charge//50)
-rm_charge=(rm_charge%50)
+for i ,x in enumerate(price):
+  lists.append(rm_charge//x)
+  rm_charge =(rm_charge%x)
+  print(x,"の枚数が",lists[i])
 
-lists.append(rm_charge//10)
-rm_charge=(rm_charge%10)
-
-lists.append(rm_charge//5)
-rm_charge=(rm_charge%5)
-
-lists.append(rm_charge)
-# print("お釣りは{}円です,枚数は{},残りは{}です".format(charge,sm5,rm_charge))
-# for i in len(lists):
-print("5000:",lists[0])
-print("1000:",lists[1])
-print("500:",lists[2])
-print("100:",lists[3])
-print("50:",lists[4])
-print("10:",lists[5])
-print("5:",lists[6])
-print("1:",lists[7])
