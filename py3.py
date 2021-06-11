@@ -19,10 +19,14 @@ def get_num(value):
     return []
   prime=[2]
   limit =int(math.sqrt(value))
-  
+
+
+  ## 奇数の作成を行なっていく
   data =[i +1 for i in range(2,value,2)]
+  print(data)
   while limit >data[0]:
     prime.append(data[0])
+    # データの入れ替えを行う
     data =[j for j in data if j %data[0]!=0]
   return prime + data
 
