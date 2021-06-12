@@ -5,3 +5,4 @@ def fibonachi(n):
 
 num =int(input())
 print(fibonachi(num))
+##practice
