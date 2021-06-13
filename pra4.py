@@ -4,4 +4,3 @@ def fibonachi(n):
     return fibonachi(n-2)+ fibonachi(n-1)
 
 num =int(input())
-print(fibonachi(num))
