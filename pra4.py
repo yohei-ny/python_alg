@@ -19,8 +19,7 @@ def fibonachi(n):
     return fib[n-1]
 
 num =int(input())
-<<<<<<< HEAD
 print(fibonachi(num))
 
-=======
->>>>>>> 8a5b0d3783f5f1b5f265ea136b8824d4b3f21333
+
+
